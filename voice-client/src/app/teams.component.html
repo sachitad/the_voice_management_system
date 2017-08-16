@@ -1,0 +1,18 @@
+<div *ngIf="mentor">
+  <h2 class="text-center">Your Teams</h2>
+  <div *ngFor="let team of teams">
+    <h4>{{ team.team_name }} - Average Score {{team.team_average_score}}</h4>
+    <hr/>
+    <h4>Candidates:</h4><br>
+    <div *ngFor="let candidate of team.candidates">
+      <a routerLink="/candidate/{{candidate.pk}}">{{candidate.name}}</a><br><br>
+    </div>
+  </div>
+</div>
+<div *ngIf="admin">
+  <h3>All Teams</h3><br>
+  <div *ngFor="let team of teams">
+    <a routerLink="/team/{{team.pk}}">{{ team.team_name }} - Average Score :{{team.team_average_score}}</a>
+    <hr/>
+  </div>
+</div>

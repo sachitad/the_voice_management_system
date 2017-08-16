@@ -1,0 +1,10 @@
+<button (click)="goBack()" class="btn btn-primary">< Go Back</button>
+<h3>{{team.team_name}}</h3>
+<p>Team Average Score: {{team.team_average_score}}</p>
+<hr/>
+<h4>Candidates</h4>
+<div *ngFor="let candidate of team.candidates">
+  <ul>
+    <li><a routerLink="/candidate/{{candidate.pk}}/">{{candidate.name}}</a></li>
+  </ul>
+</div>

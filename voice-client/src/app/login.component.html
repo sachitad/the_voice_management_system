@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h3>Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control"
+               formControlName="username" required>
+        <span class="text-danger">{{usernameError}}</span>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control"
+               formControlName="password" required>
+        <span class="text-danger">{{passwordError}}</span>
+
+      </div>
+      <pre class="text-danger" *ngIf="error">{{error}}</pre>
+      <button class="btn btn-success">Login</button>
+    </form>
+  </div>
+</div>
+
+

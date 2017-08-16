@@ -1,0 +1,14 @@
+<button (click)="goBack()" class="btn btn-primary">< Go Back</button>
+<h3>{{candidate.name}}</h3>
+<div>
+  <p>Average Score: {{candidate.average_score}}</p>
+  <p>Team Average Score: {{candidate.team_average_score}}</p>
+</div>
+<hr/>
+<h3>Activities</h3>
+<div *ngFor="let activity of candidate.activities" class="panel panel-default text-center">
+  <div class="panel-body">
+    <p>Song Name: {{activity.song_name}}</p>
+    <p>Date of Performance: {{activity.date_of_performance}}</p>
+  </div>
+</div>
